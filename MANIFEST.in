@@ -1,5 +1,2 @@
 graft src/indictrans/models
-graft src/indictrans/putils/beamsearch.pyx
-graft src/indictrans/putils/ctranxn.pyx
-graft src/indictrans/putils/sparseadd.pyx
-graft src/indictrans/putils/viterbi.pyx
+graft src/indictrans/putils
