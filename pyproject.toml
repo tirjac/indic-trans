@@ -32,4 +32,4 @@ build-backend = "setuptools.build_meta"
 package-type = "library"
 
 [project.scripts]
-tishya-cli = "indictrans.apps.indictrans_cli:create_app"
+indictrans-cli = "indictrans.apps.indictrans_cli:create_app"
