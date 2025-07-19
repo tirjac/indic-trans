@@ -1,0 +1,5 @@
+src/tishya/models/npzdata.npz filter=lfs diff=lfs merge=lfs -text
+src/tishya/models/vecdata.npz filter=lfs diff=lfs merge=lfs -text
+src/indictrans/models/npzdata.npz filter=lfs diff=lfs merge=lfs -text
+src/indictrans/models/vecdata.npz filter=lfs diff=lfs merge=lfs -text
+*.npz filter=lfs diff=lfs merge=lfs -text

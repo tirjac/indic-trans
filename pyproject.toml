@@ -1,0 +1,35 @@
+[project]
+name = "indictrans"
+version = "0.1.0"
+description = "python tools for transliteration"
+authors = [ {name = "Shreos Roychowdhury", email = "shreos@tirja.com"}, ]
+dependencies = [
+	"scipy>=1.16.0",
+	"numpy>=2.3.1",
+	"six>=1.17.0",
+	"future>=1.0.0",
+	"cython>=3.1.2",
+	"pbr>=6.1.1"
+]
+requires-python = ">=3.10"
+readme = "README.md"
+license-files = ["LICENSE.txt"]
+classifiers = [
+	"Development Status :: 3 - Alpha",
+	"Programming Language :: Python :: 3",
+	"Programming Language :: Python :: 3.10",
+	"Programming Language :: Python :: 3.11",
+	"Programming Language :: Python :: 3.12",
+	"Intended Audience :: Developers",
+	"Natural Language :: English",
+]
+
+[build-system]
+requires = ["setuptools>=69", "wheel", "cython", "numpy"]
+build-backend = "setuptools.build_meta"
+
+[tool.pdm]
+package-type = "library"
+
+[project.scripts]
+tishya-cli = "indictrans.apps.indictrans_cli:create_app"
