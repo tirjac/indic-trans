@@ -9,6 +9,18 @@ This is an adaptation from the wonderful work by Irshad Ahmad Bhat
 - there is a cli program to test 
 - loading is simplified
 
+## Installing
+
+```
+pip install indictrans
+```
+
+## Basic Program
+
+```
+indictrans-cli -x
+```
+
 ## Cite
 
 Citation for the original work is:
