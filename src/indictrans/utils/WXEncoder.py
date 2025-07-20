@@ -43,17 +43,10 @@ class WXEncoder():
 	def fit(self):
 		self.punctuation = r'!"#$%&\'()*+,-./:;<=>?@\[\\\]^_`{|}~'
 		# Handle iscii characters
-		self.iscii_num = dict(
-			zip(
-				[unichr(i) for i in range(161, 252)],
-				['\x03%s\x04' % (unichr(i)) for i in range(300, 391)]))
-		self.num_iscii = dict(
-			zip(
-				['\x03%s\x04' % (unichr(i)) for i in range(300, 391)],
-				[unichr(i) for i in range(161, 252)]))
+		self.iscii_num = dict( zip( [unichr(i) for i in range(161, 252)], ['\x03%s\x04' % (unichr(i)) for i in range(300, 391)]))
+		self.num_iscii = dict( zip( ['\x03%s\x04' % (unichr(i)) for i in range(300, 391)], [unichr(i) for i in range(161, 252)]))
 		self.mask_isc = re.compile('([\xA1-\xFB])')
-		self.unmask_isc = re.compile('(%s)' % '|'.join(
-			['\x03%s\x04' % (unichr(i)) for i in range(300, 391)]))
+		self.unmask_isc = re.compile('(%s)' % '|'.join( ['\x03%s\x04' % (unichr(i)) for i in range(300, 391)]))
 		if self.order == "utf2wx":
 			self.initialize_utf2wx_hash()
 		elif self.order == "wx2utf":
